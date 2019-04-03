@@ -2,6 +2,9 @@
 #include<string.h> 
 #include<stdlib.h> 
  
+ char Cipher(char* string, int key);
+ 
+ 
  int main(void)
  
  {
@@ -11,13 +14,13 @@
     
       printf("Please enter text you want to encrypt:");
        
-      fgets(string, sizeof(string), stdin);
-      
-      printf("Encrypted text is:");     
+      gets(string);
+      string = Cipher(*string,1);
+      printf("Encrypted text is: %s", string);     
    
   } 
       
-      void Cipher(char* string, int key){
+      char Cipher(char* string, int key){
           int i=0;
           key=1;
           int cyphervalue; 
@@ -30,7 +33,7 @@
                
               scanf("%s, %c", string, &cypher);
               
-              printf("read: %s, %c", string, cypher); 
+              printf("%s, %c", string, cypher); 
               
               i++;
           }
