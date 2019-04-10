@@ -4,7 +4,7 @@
  
  char Cipher(char* string, int key);
  
- 
+ //change
  int main(void)
  
  {
